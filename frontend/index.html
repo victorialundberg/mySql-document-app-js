@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Document App</title>
+</head>
+<body>
+    <header>
+        <p>My Document App</p>
+    </header>
+    <main>
+        <div id="renderedContent">
+
+            <div>
+                <button id="openSignInBtn">Sign in</button>
+                <button id="openSignUpBtn">Sign up</button>
+            </div>
+            <div id="signInForm">
+                <input type="text" id="signInUsername">
+                <input type="text" id="signInPassword">
+                <button id="signInBtn">Sign in</button>
+                <p class="errorMessage">Oops, wrong username or password!</p>
+            </div>
+            <div id="signUpForm">
+                <input type="text" id="signUpUsername">
+                <input type="text" id="signUpPassword">
+                <button id="signUpBtn">Sign up and get started</button>
+            </div>
+
+            <div id="userPage">
+                <button id="myDocumentsBtn">My documents</button>
+                <button id="signOutBtn">Sign out</button>
+            </div>
+
+            <div id="documentPage">
+                <button id="createDocumentBtn">Create new document</button>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>What will you call it?</p>
+                <input type="text">
+                <button>Create!</button>
+            </div>
+
+            <div>
+                <h2>Title</h2>
+                <p>Content</p>
+                <button id="deleteDocumentBtn">Delete</button>
+                <button id="editDocumentBtn">Edit</button>
+                <button class="backToDocumentPageBtn">Back</button>
+            </div>
+
+            <div>
+                <input type="text">
+                <input type="text">
+                <button id="saveAndPreviewDocumentBtn">Save and preview</button>
+                <button id="saveDocumentBtn">Save</button>
+                <button class="backToDocumentPageBtn">Back</button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2024</p>
+    </footer>
+</body>
+</html>
