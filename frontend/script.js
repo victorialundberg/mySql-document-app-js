@@ -1,1 +1,2 @@
-import signUpBtn from "./usersPage.js";
+import homepage from "./homepage.js";
+homepage();
