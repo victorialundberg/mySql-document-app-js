@@ -2,17 +2,23 @@ import documentpage from "./documentPage.js";
 
 export default function previewPage(documentid) {
     let renderedContent = document.getElementById("renderedContent");
+    let previewPageWrapper = document.createElement("div");
+    previewPageWrapper.classList.add("previewPage");
     let title = document.createElement("h2");
+    title.classList.add("previewPageTitle");
     let content = document.createElement("p");
+    content.classList.add("previewPageContent");
 
     let btnContainer = document.createElement("div");
+    btnContainer.classList.add("previewPageBtnContainer");
     let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete this file"
     let backBtn = document.createElement("button");
     backBtn.textContent = "Back"
 
     renderedContent.innerHTML = "";
-    renderedContent.append(title, content, btnContainer);
+    previewPageWrapper.append(title, content, btnContainer)
+    renderedContent.append(previewPageWrapper);
     btnContainer.append(deleteBtn, backBtn);
 
     fetch("http://localhost:3000/documents/read", {

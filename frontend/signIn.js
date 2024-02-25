@@ -5,6 +5,11 @@ export default function signIn() {
 
     let renderedContent = document.getElementById("renderedContent");
     let signInForm = document.createElement("div");
+    signInForm.classList.add("signInForm");
+    let inputContainer = document.createElement("div");
+    inputContainer.classList.add("signInPageInputContainer");
+    let btnContainer = document.createElement("div");
+    btnContainer.classList.add("signInPageBtnContainer");
     let signInUsername = document.createElement("input");
     signInUsername.type = "text";
     signInUsername.placeholder = "Username";
@@ -18,7 +23,9 @@ export default function signIn() {
     let signInMsg = document.createElement("p");
 
     renderedContent.innerHTML = "";
-    signInForm.append(signInUsername, signInPassword, signInBtn, backBtn, signInMsg);
+    inputContainer.append(signInUsername, signInPassword);
+    btnContainer.append(signInBtn, backBtn);
+    signInForm.append(inputContainer, btnContainer, signInMsg);
     renderedContent.appendChild(signInForm);
 
     signInBtn.addEventListener("click", () => {

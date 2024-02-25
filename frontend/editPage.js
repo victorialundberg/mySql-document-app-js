@@ -4,14 +4,18 @@ import previewPage from "./previewPage.js";
 
 export default function (documentid) {
     let renderedContent = document.getElementById("renderedContent");
+    let editPageWrapper = document.createElement("div");
+    editPageWrapper.classList.add("editPage");
     let title = document.createElement("input");
     title.type = "text";
+    title.classList.add("editPageInput")
     let content = document.createElement("textarea");
     content.id = "textContent"
     let saveMsg = document.createElement("p");
     let titleMsg = document.createElement("p");
 
     let btnContainer = document.createElement("div");
+    btnContainer.classList.add("editPageBtnContainer");
     let savePreviewBtn = document.createElement("button");
     savePreviewBtn.textContent = "Save and preview";
     let saveBtn = document.createElement("button");
@@ -20,7 +24,8 @@ export default function (documentid) {
     backBtn.textContent = "Back";
 
     renderedContent.innerHTML = "";
-    renderedContent.append(title, content, btnContainer, saveMsg, titleMsg);
+    editPageWrapper.append(title, btnContainer, saveMsg, titleMsg)
+    renderedContent.append(editPageWrapper, content);
     btnContainer.append(savePreviewBtn, saveBtn, backBtn);
 
     tinymce.init({

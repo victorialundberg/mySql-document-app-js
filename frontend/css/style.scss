@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        #renderedContent {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+            min-height: 80vh;
+            .homepageBtnContainer {
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: 200px;
+                button {
+                    margin: 0 25px;
+                    border-radius: 5px;
+                }
+            }
+            .signInForm{
+                .signInPageInputContainer{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .signInPageBtnContainer {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                    margin-top: 30px;
+                }
+            }
+            .signUpForm{
+                .signUpPageInputContainer{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .signUpPageBtnContainer {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                    margin-top: 30px;
+                }
+            }
+            .userPageBtnContainer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
+                button {
+                    width: 200px;
+                    padding: 10px;
+                    margin: 30px;
+                }
+            }
+            .documentPage {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                .documentList {
+
+                    li {
+                        display: grid;
+                        grid-template-columns: 70% 15% 15%;
+                        list-style: none;
+                        align-items: center;
+                        justify-items: start;
+                        width: 80vw;
+                        margin-bottom: 10px;
+                        button {
+                            width: auto;
+                        }
+                    }
+                }
+                .documentPageBtnContainer {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                    button {
+                        width: 200px;
+                        padding: 10px;
+                        margin: 20px 30px;
+                    }
+                }
+            }
+            .addDocumentPage {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                .addDocumentPageInput {
+                    height: 35px;
+                    width: 400px;
+                }
+                .addDocumentBtnContainer {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                    button {
+                        width: 200px;
+                        padding: 10px;
+                        margin: 20px 10px;
+                    }
+                }
+                p {
+                    color: red;
+                }
+            }
+            .previewPage {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                .previewPageContent {
+                    text-align: justify;
+                    padding: 0 50px;
+                }
+                .previewPageBtnContainer {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                    button {
+                        width: 200px;
+                        padding: 10px;
+                        margin: 20px 10px;
+                    }
+                }
+            }
+            .editPage {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                
+                .editPageInput {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                .editPageBtnContainer {
+                    width: 350px;
+                    margin-top: 30px;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    justify-items: center;
+                    :nth-child(1) {
+                        width: 150px;                        width: 150px;
+                        padding: 10px;
+                        grid-column: span 2;
+                    }
+                    :nth-child(2) {
+                        width: 75px;
+                        padding: 10px;
+                    }
+                    :nth-child(3) {
+                        width: 75px;
+                        padding: 10px;
+                    }
+                }
+                p {
+                    color: red;
+                }
+            }
+
+            input {
+                width: 300px;
+                height: 25px;
+                padding: 0 10px;
+                margin: 3px;
+                border-style: none;
+                border: 2px solid black;
+                border-radius: 10px;
+            }
+            button {
+                text-transform: uppercase;
+                padding: 10px;
+                width: 100px;
+                border-style: none;
+                border: 2px solid black;
+                border-radius: 10px;
+                color: black;
+                background-color: white;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+}

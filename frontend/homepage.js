@@ -5,6 +5,7 @@ export default function homepage() {
 
     let renderedContent = document.getElementById("renderedContent");
     let btnContainer = document.createElement("div");
+    btnContainer.classList.add("homepageBtnContainer");
 
     let openSignInBtn = document.createElement("button");
     openSignInBtn.textContent = "Sign in";

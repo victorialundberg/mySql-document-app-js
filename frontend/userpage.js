@@ -4,7 +4,8 @@ import documentpage from "./documentPage.js";
 export default function userpage() {
 
     let renderedContent = document.getElementById("renderedContent");
-    let btnConatiner = document.createElement("div");
+    let btnContainer = document.createElement("div");
+    btnContainer.classList.add("userPageBtnContainer");
 
     let myDocumentsBtn = document.createElement("button");;
     myDocumentsBtn.textContent = "My Documents";
@@ -13,8 +14,8 @@ export default function userpage() {
     signOutBtn.textContent = "Sign out";
 
     renderedContent.innerHTML = "";
-    btnConatiner.append(myDocumentsBtn, signOutBtn);
-    renderedContent.append(btnConatiner);
+    btnContainer.append(myDocumentsBtn, signOutBtn);
+    renderedContent.append(btnContainer);
 
     myDocumentsBtn.addEventListener("click", documentpage);
     signOutBtn.addEventListener("click", homepage);

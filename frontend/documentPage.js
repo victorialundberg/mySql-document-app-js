@@ -5,8 +5,12 @@ import editPage from "./editPage.js";
 
 export default function documentpage() {
     let renderedContent = document.getElementById("renderedContent");
+    let documentPageWrapper = document.createElement("div");
+    documentPageWrapper.classList.add("documentPage");
     let documentList = document.createElement("ul");
+    documentList.classList.add("documentList");
     let btnContainer = document.createElement("div");
+    btnContainer.classList.add("documentPageBtnContainer");
     let addDocumentBtn = document.createElement("button");
     addDocumentBtn.textContent = "Add new document";
     let backBtn = document.createElement("button");
@@ -51,8 +55,9 @@ export default function documentpage() {
         });
 
     renderedContent.innerHTML = "";
+    documentPageWrapper.append(documentList, btnContainer)
     btnContainer.append(addDocumentBtn, backBtn);
-    renderedContent.append(documentList, btnContainer);
+    renderedContent.append(documentPageWrapper);
     addDocumentBtn.addEventListener("click", addDocument);
     backBtn.addEventListener("click", () => userpage(userid));
 

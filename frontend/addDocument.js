@@ -2,11 +2,17 @@ import documentpage from "./documentPage.js";
 
 export default function addDocument() {
     let renderedContent = document.getElementById("renderedContent");
+    let addDocumentPageWrapper = document.createElement("div");
+    addDocumentPageWrapper.classList.add("addDocumentPage");
+    let btnContainer = document.createElement("div");
+    btnContainer.classList.add("addDocumentBtnContainer");
     let documentForm = document.createElement("div");
-    let heading = document.createElement("p");
-    heading.innerText = "What will you call it?";
+    let heading = document.createElement("h3");
+    heading.innerText = "What's your note to self?";
     let titleInput = document.createElement("input");
     titleInput.type = "text";
+    titleInput.placeholder = "Title";
+    titleInput.classList.add("addDocumentPageInput");
     let createDocumentBtn = document.createElement("button");
     createDocumentBtn.textContent = "Create new Document";
     let backBtn = document.createElement("button");
@@ -14,7 +20,9 @@ export default function addDocument() {
     let titleMsg = document.createElement("p");
 
     renderedContent.innerHTML = "";
-    documentForm.append(heading, titleInput, createDocumentBtn, backBtn, titleMsg);
+    btnContainer.append(createDocumentBtn, backBtn);
+    addDocumentPageWrapper.append(heading, titleInput, btnContainer, titleMsg)
+    documentForm.append(addDocumentPageWrapper);
     renderedContent.appendChild(documentForm);
 
     createDocumentBtn.addEventListener("click", () => {
